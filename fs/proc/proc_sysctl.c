@@ -1139,6 +1139,7 @@ static int sysctl_check_table(const char *path, struct ctl_table_header *header)
 		    (entry->proc_handler == proc_douintvec) ||
 		    (entry->proc_handler == proc_douintvec_minmax) ||
 		    (entry->proc_handler == proc_dointvec_minmax) ||
+		    (entry->proc_handler == proc_dointvec_minmax_sysadmin) ||
 		    (entry->proc_handler == proc_dou8vec_minmax) ||
 		    (entry->proc_handler == proc_dointvec_jiffies) ||
 		    (entry->proc_handler == proc_dointvec_userhz_jiffies) ||
@@ -1342,7 +1343,7 @@ static struct ctl_dir *sysctl_mkdir_p(struct ctl_dir *dir, const char *path)
  * Several default handlers are available to cover common cases -
  *
  * proc_dostring(), proc_dointvec(), proc_dointvec_jiffies(),
- * proc_dointvec_userhz_jiffies(), proc_dointvec_minmax(),
+ * proc_dointvec_userhz_jiffies(), proc_dointvec_minmax(), proc_dointvec_minmax_sysadmin(),
  * proc_doulongvec_ms_jiffies_minmax(), proc_doulongvec_minmax()
  *
  * It is the handler's job to read the input buffer from user memory
