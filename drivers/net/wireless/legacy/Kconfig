@@ -28,6 +28,7 @@ config USB_NET_RNDIS_WLAN
 	tristate "Wireless RNDIS USB support"
 	depends on USB
 	depends on CFG80211
+	depends on BROKEN
 	select USB_NET_DRIVERS
 	select USB_USBNET
 	select USB_NET_CDCETHER
