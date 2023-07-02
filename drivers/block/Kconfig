@@ -388,7 +388,7 @@ config BLK_DEV_UBLK
 config BLKDEV_UBLK_LEGACY_OPCODES
 	bool "Support legacy command opcode"
 	depends on BLK_DEV_UBLK
-	default y
+	default n
 	help
 	  ublk driver started to take plain command encoding, which turns out
 	  one bad way. The traditional ioctl command opcode encodes more

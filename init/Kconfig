@@ -1659,9 +1659,9 @@ config AIO
 	  this option saves about 7k.
 
 config IO_URING
-	bool "Enable IO uring support" if EXPERT
+	bool "Enable IO uring support"
 	select IO_WQ
-	default y
+	default n
 	help
 	  This option enables support for the io_uring interface, enabling
 	  applications to submit and complete IO through submission and
